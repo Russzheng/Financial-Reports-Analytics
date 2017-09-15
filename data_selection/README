@@ -1,0 +1,23 @@
+
+This is the stencil folder containing codes for data collection.
+
+data is the folder for storing the collected data.
+
+file_number is the folder to store files containing information about 1. ids of files we need to collect
+2. ids of corrupted files 3. ids of files that failed to download/convert and etc.
+
+output is the folder containing output csv files, listing files that were 1. successfully added 2. non-existent (need further redownloading and etc.)
+
+Check success.csv and failure.csv to check which files were successfully added to the folder and which were not.
+
+pre_process.py is the python file to get the list of ids of files that we need and are not corrupted or non-existent, and it will store files in data folder.
+
+Change directories if you want!
+
+It might take a while. Be patient.
+
+test.py is the file we use to double check the IDs of the files wefull_initiation report id.csv successfully/unsuccessfully collected.
+
+Check the two output files in the output folder with prefix 'doublecheck' for details.
+
+sort_file.py is the file we use to sort files into different folders by contributors. full_initiation report id.csv contains all information about initiation reports. One thing we are particularly interested is the contributors' name as we try to clean the data by contributors.

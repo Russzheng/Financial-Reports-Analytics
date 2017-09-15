@@ -1,0 +1,30 @@
+Usage:
+1.
+```bash
+bash filter.sh
+```
+filter.sh should be in the same folder with all the data (pdfs)
+there will be a output txt file that documents all failed conversions
+
+corrupted pdfs will be stored in corrupted_pdfs folder
+
+2.
+```python
+python3 pdf_2_xml.py
+```
+modify directories if needed. explained fully in the comments of the code.
+pdfs that failed conversion will be moved to failure folder.
+failure.csv and success.csv in output folder will document file ids that were unsucessfully or successfully converted.
+
+Requirement:
+The folder "../corrupted_pdfs" must exist to store the filtered corrupted pdfs
+
+NOTES: folders with suffix _smallset are folders that store all files from a certain contributor
+lets say, WELLS FARGO
+
+3.
+```python
+python3 post_process.py
+```
+
+convert xml files to text files for further training.

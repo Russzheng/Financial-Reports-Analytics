@@ -1,8 +1,19 @@
-Hey there
-So this folder consists of multiple models we built/are building/want to build
-to analyse the reports.
+To run the program
+python3 LDA.py
 
-Every sub-folder has its own README. Read it pls.
+data folder should contain all the text files you want to feed to the LDA model
 
-LDA folder contains files for unsupervised LDA model
-label_extraction folder contains files to extract labels for further supervise training.
+data_small is the folder I used to store smaller datasets, for testing purpose mainly.
+
+output is where I store the terminal output, for plotting, sometimes I just forgot to uncomment the plotting 
+sectionin the code.
+
+plot.py is the program I use to plot graphs perplexity--# of topics.
+
+
+ATTENTION:
+For LDA.py I used two models, gensim and sklearn-lda.
+The lda module in sklearn is buggy, it outputs wrong perplexity score cause 
+it messed probability with likelihood. So I have to use gensim for perplexity score.
+However, gensim is slow af. So you can use sklearn to output topics. 
+Please check comments for details of which part is gensim and which part is sklearn.

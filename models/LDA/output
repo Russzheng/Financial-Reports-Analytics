@@ -1,0 +1,71 @@
+Data set size is : 522
+Training starts
+Topic number: 1
+Perplexity: -12449014.0792
+Per-word Perplexity: 202.30983103
+Topic number: 2
+Perplexity: -12308170.8052
+Per-word Perplexity: 190.514314973
+Topic number: 3
+Perplexity: -12254475.8274
+Per-word Perplexity: 186.200705153
+Topic number: 4
+Perplexity: -12164698.8432
+Per-word Perplexity: 179.205489731
+Topic number: 5
+Perplexity: -12156933.5517
+Per-word Perplexity: 178.612928418
+Topic number: 6
+Perplexity: -12072540.8306
+Per-word Perplexity: 172.298002847
+Topic number: 7
+Perplexity: -12047186.8668
+Per-word Perplexity: 170.444798914
+Topic number: 8
+Perplexity: -12066037.716
+Per-word Perplexity: 171.820756392
+Topic number: 9
+Perplexity: -12014262.3897
+Per-word Perplexity: 168.067958487
+Topic number: 10
+Perplexity: -11956695.1726
+Per-word Perplexity: 163.99150477
+Training ends
+
+GENSIM:
+0.015*"compani" + 0.012*"market" + 0.011*"sale" + 0.009*"growth" + 0.009*"product" + 0.007*"year" + 0.006*"margin" + 0.006*"share" + 0.006*"e" + 0.005*"revenu"
+0.017*"store" + 0.015*"compani" + 0.010*"growth" + 0.009*"secur" + 0.008*"sale" + 0.007*"year" + 0.007*"margin" + 0.007*"estim" + 0.006*"report" + 0.006*"unit"
+0.014*"compani" + 0.009*"estim" + 0.008*"growth" + 0.008*"year" + 0.007*"share" + 0.006*"oper" + 0.006*"rate" + 0.006*"million" + 0.006*"market" + 0.006*"secur"
+0.014*"x" + 0.009*"market" + 0.008*"compani" + 0.007*"product" + 0.006*"price" + 0.006*"secur" + 0.006*"food" + 0.005*"store" + 0.005*"growth" + 0.005*"custom"
+0.014*"compani" + 0.010*"sale" + 0.010*"growth" + 0.009*"market" + 0.008*"share" + 0.007*"product" + 0.006*"secur" + 0.006*"includ" + 0.006*"e" + 0.006*"year"
+0.016*"compani" + 0.011*"market" + 0.009*"revenu" + 0.008*"growth" + 0.008*"product" + 0.006*"servic" + 0.006*"secur" + 0.006*"estim" + 0.006*"believ" + 0.006*"share"
+0.014*"patient" + 0.010*"studi" + 0.007*"cell" + 0.006*"dose" + 0.005*"phase" + 0.005*"data" + 0.005*"develop" + 0.005*"clinic" + 0.005*"use" + 0.004*"includ"
+0.008*"patient" + 0.008*"compani" + 0.006*"market" + 0.006*"believ" + 0.005*"expect" + 0.004*"year" + 0.004*"drug" + 0.004*"servic" + 0.004*"estim" + 0.004*"state"
+0.010*"estim" + 0.008*"distribut" + 0.007*"growth" + 0.007*"compani" + 0.007*"year" + 0.007*"oper" + 0.007*"x" + 0.006*"per" + 0.006*"cash" + 0.006*"secur"
+
+LDA:
+Topic 0:
+revenu servic busi custom provid solut secur data enterpris technolog
+Topic 1:
+distribut cash unit gp partner partnership interest flow idr lp
+Topic 2:
+corn glass sale label brand display busi food secur product
+Topic 3:
+sale fiber think optic busi demand quarter product technolog devic
+Topic 4:
+googl search mobil advertis display click content onlin platform offer
+Topic 5:
+busi year may acquisit potenti could manag term cash capit
+Topic 6:
+ns drug cell patient biotech may panel data potenti studi
+Topic 7:
+drill eqt deepwat oil play hedg per energi prove well
+Topic 8:
+cfa atm secur servic financi direct research bank global cpa
+Topic 9:
+fy inc oper ebitda cash million year secur ow net
+
+
+
+
+

@@ -1,0 +1,8 @@
+Hey there
+So this folder consists of multiple models we built/are building/want to build
+to analyse the reports.
+
+Every sub-folder has its own README. Read it pls.
+
+LDA folder contains files for unsupervised LDA model
+label_extraction folder contains files to extract labels for further supervise training.

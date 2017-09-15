@@ -1,0 +1,7 @@
+This folder contains a small sample of 10K filings and codes.
+
+It is meant to clean the 10-K filings, applying LDA and double-check LDA's performance.
+
+Modify directories if data directories are different.
+
+As commented in the code, GENSIM library is the python wrapper version of Java's mallet topic modeling library, same as what the paper used.

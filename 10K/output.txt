@@ -1,0 +1,4 @@
+Dataloading Starts
+Dataset size is : 0
+Training starts
+Topic number: 10

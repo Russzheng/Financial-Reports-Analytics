@@ -25,15 +25,16 @@ import gensim
 import random
 import csv
 import logging
+import time
 
-DATA_DIR = '/home/peng/Desktop/10K_processed'
+DATA_DIR = '/media/peng/New Volume/Back-up/Desktop/10K_processed'
 
 common_words = set(['company', 'will', 'value', 'information', 'years', 'upon', 'company\'s', 
     'fiscal', 'rate', 'based', 'report', 'sales', 'management', 'services', 'form', 'costs', 'related', 
     'tax', 'ended', 'certain', 'market', 'credit', 'products', 'amount', 'period', 'net', 'including', 
     'opertions', 'securities', 'cash', 'time', 'statements', 'income', 'section', 'common', 'assets', 
     'shares', 'business', 'plan', 'year', 'date', 'interest', 'december', 'agreement', 'stock', 'may', 
-    'financial', 'million', 'shall'])
+    'financial', 'million', 'shall', 'style', 'block', 'display', 'color', 'border', 'bottom'])
 
 def plot(topic_li, perplex_li, flag):
     topic_li = np.array(topic_li)
@@ -48,9 +49,9 @@ def plot(topic_li, perplex_li, flag):
     plt.show()
 
     if flag:
-        plt.savefig('test_log_perplex_li.fig')
+        plt.savefig('test_log_perplex_li.png')
     else:
-        plt.savefig('train_log_perplex_li.fig')
+        plt.savefig('train_log_perplex_li.png')
 
 def train_test_split(x, test_pct):
     results = [], []
@@ -81,22 +82,30 @@ def load_data(file_name):
     return words
 
 def main():
+    start_time = time.time()
     # how many data entries for our csv files, some double checking
     # prepare bag of words
-    print('Dataloading Starts')
+    print('Dataloading Starts') 
+    # 10-40s for every 1K files loaded
+    # when memoery is almost consumed, could take double the time
     words_li = []
     id_li = []
     for file_name in os.listdir(DATA_DIR):
         id_li.append(file_name)
         words_li.append(load_data(DATA_DIR + '/' + file_name))
+        if len(id_li) >= 10000:
+            break
+        if len(id_li) % 1000 == 0:
+            print(len(id_li), 'files processed')
+            print('--- %s seconds ---' % (time.time() - start_time))
 
     data_size = len(id_li)
     print('Dataset size is :', data_size)
 
     # for some really bizzare cases
-    if len(words_li) != len(id_li):
-        print('ERROR when loading data!')
-        exit(9)
+    #if len(words_li) != len(id_li):
+    #    print('ERROR when loading data!')
+    #    exit(9)
     
     np.asarray(words_li)
 
@@ -126,18 +135,10 @@ def main():
         print('Topic number:', i)
 
         model = gensim.models.ldamodel.LdaModel(train_features, num_topics=i, id2word = dictionary, passes=8)
-        #logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
         if i == 10 or i == 150:
             data = model.print_topics(num_topics=-1, num_words=no_top_words)
             print(data)
-
-            # remove the probability part
-            #for i in range(1, len(data)):
-            #    temp = ''
-            #    for j in range(1,40,2):
-            #        temp += str(data[i][1].split('"')[j]) + ' '
-            #    data[i][1] = temp
 
             with open('topic_word_' + str(i) + '.csv','w') as out:
                 csv_out = csv.writer(out)
